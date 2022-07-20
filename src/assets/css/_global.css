@@ -1,0 +1,9 @@
+html,
+body,
+#app {
+    @apply w-full h-full antialiased;
+}
+
+a {
+    @apply no-underline;
+}
