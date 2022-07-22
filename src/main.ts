@@ -4,6 +4,7 @@ import 'flowbite'
 import App from './App.vue'
 import router from './router/index'
 import { createPinia } from 'pinia'
+import axios from 'axios'
 
 const pinia = createPinia()
 

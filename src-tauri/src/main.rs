@@ -3,6 +3,10 @@
   windows_subsystem = "windows"
 )]
 
+use tauri::{ Menu, Submenu, MenuItem, CustomMenuItem };
+
+use tauri::Manager;
+
 #[tauri::command]
 async fn close_splashscreen(window: tauri::Window) {
   // Close splashscreen
@@ -14,8 +18,42 @@ async fn close_splashscreen(window: tauri::Window) {
 }
 
 fn main() {
+  let submenu_gear = Submenu::new(
+    "Gear",
+    Menu::new()
+      .add_native_item(MenuItem::Copy)
+      .add_native_item(MenuItem::Paste)
+      .add_native_item(MenuItem::Separator)
+      .add_native_item(MenuItem::Zoom)
+      .add_native_item(MenuItem::Separator)
+      .add_native_item(MenuItem::Hide)
+      .add_native_item(MenuItem::CloseWindow)
+      .add_native_item(MenuItem::Quit)
+  );
+  let close = CustomMenuItem::new("close".to_string(), "Close");
+  let quit = CustomMenuItem::new("quit".to_string(), "Quit");
+  let submenu_customer = Submenu::new(
+    "Customer",
+    Menu::new()
+      .add_item(close)
+      .add_item(quit)
+  );
+  let menus = Menu::new()
+    .add_submenu(submenu_gear)
+    .add_submenu(submenu_customer);
+  
   tauri::Builder::default()
-     .invoke_handler(tauri::generate_handler![close_splashscreen])
+    .menu(menus)
+    .on_menu_event(|event| match event.menu_item_id() {
+      "quit" => {
+        std::process::exit(0);
+      }
+      "close" => {
+        event.window().close().unwrap();
+      }
+      _ => {}
+    })
+    .invoke_handler(tauri::generate_handler![close_splashscreen])
     .setup(|app| {
       let splashscreen_window = app.get_window("splashscreen").unwrap();
       let main_window = app.get_window("main").unwrap();
@@ -25,7 +63,7 @@ fn main() {
         println!("Initializing...");
         std::thread::sleep(std::time::Duration::from_secs(10));
         println!("Done initializing.");
-
+  
         // After it's done, close the splashscreen and display the main window
         splashscreen_window.close().unwrap();
         main_window.show().unwrap();

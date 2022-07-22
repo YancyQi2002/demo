@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import {
-    createRouter,
-    createWebHistory,
+  createRouter,
+  createWebHistory,
 } from 'vue-router'
 
 const routes: RouteRecordRaw[] = []
