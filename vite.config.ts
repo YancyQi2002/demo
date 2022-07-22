@@ -10,6 +10,8 @@ import {
   HeadlessUiResolver,
 } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 const resolve = (p: string) => {
   return path.resolve(__dirname, p)
@@ -44,8 +46,12 @@ export default defineConfig({
         AntDesignVueResolver(),
         ElementPlusResolver(),
         HeadlessUiResolver(),
+        IconsResolver(),
       ],
     }),
     ElementPlus(),
+    Icons({
+      compiler: 'vue3'
+    })
   ]
 })
