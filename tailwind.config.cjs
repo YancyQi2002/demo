@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     "@tailwindcss/forms",
+    "@tailwindcss/typography",
     "flowbite/plugin"
   ],
 }
