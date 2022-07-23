@@ -70,3 +70,21 @@ support = true
       sourceMaps = true
       stopOnEntry = false
       type = "pwa-node"
+
+# run = "chmod +x tooling/fcc && fcc welcome"
+# language = "nix"
+
+# [env]
+# PATH = "/home/runner/${REPL_SLUG}/tooling${PATH}"
+
+# [packager]
+# language = "rust"
+
+# [packager.features]
+# packageSearch = true
+
+# [languages.rust]
+# pattern = "**/*.rs"
+
+# [languages.rust.languageServer]
+# start = "rust-analyzer"

@@ -8,7 +8,8 @@ import {
   AntDesignVueResolver,
   ElementPlusResolver,
   HeadlessUiResolver,
-  DevUiResolver
+  DevUiResolver,
+  VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
 import Icons from 'unplugin-icons/vite'
@@ -20,9 +21,6 @@ const resolve = (p: string) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  optimizeDeps: {
-    include: ['axios']
-  },
   resolve: {
     alias: {
       '@': resolve('./src')
@@ -44,7 +42,19 @@ export default defineConfig({
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.vue\??/, // .vue
       ],
-      imports: ['vue', 'vue/macros', 'vue-router', 'pinia', '@vueuse/core'],
+      imports: [
+        'vue',
+        'vue/macros',
+        'vue-router',
+        'pinia',
+        '@vueuse/core',
+        {
+          'axios': [
+            // default imports
+            ['default', 'axios'], // import { default as axios } from 'axios',
+          ],
+        }
+      ],
       resolvers: [
         AntDesignVueResolver(),
         ElementPlusResolver(),
@@ -59,8 +69,10 @@ export default defineConfig({
         ElementPlusResolver(),
         HeadlessUiResolver(),
         IconsResolver(),
-        DevUiResolver()
+        DevUiResolver(),
+        VueUseComponentsResolver(),
       ],
+      dts: true,
     }),
     ElementPlus(),
     Icons({
