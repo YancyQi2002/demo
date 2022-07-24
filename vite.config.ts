@@ -45,13 +45,20 @@ export default defineConfig({
       imports: [
         'vue',
         'vue/macros',
-        'vue-router',
         'pinia',
         '@vueuse/core',
+        'vitest',
         {
           'axios': [
             // default imports
             ['default', 'axios'], // import { default as axios } from 'axios',
+          ],
+          'vue-router': [
+            'createRouter',
+            'createWebHistory',
+            'RouteRecordRaw',
+            'useRouter',
+            'useRoute',
           ],
         }
       ],

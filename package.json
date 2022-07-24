@@ -7,7 +7,8 @@
     "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "test": "vitest"
   },
   "dependencies": {
     "@headlessui/vue": "^1.6.7",
@@ -20,11 +21,11 @@
     "axios": "^0.27.2",
     "element-plus": "^2.2.10",
     "flowbite": "^1.5.1",
-    "flowbite-vue": "^0.0.1",
+    "flowbite-vue": "^0.0.2",
     "pinia": "^2.0.16",
     "qs": "^6.11.0",
     "vue": "^3.2.37",
-    "vue-devui": "1.0.0-rc.14",
+    "vue-devui": "^1.0.0-rc.14",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "@types/node": "^18.0.6",
     "@types/qs": "^6.9.7",
     "@vitejs/plugin-vue": "^3.0.1",
+    "@vitest/ui": "^0.18.1",
     "@vue/compiler-sfc": "^3.2.37",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
@@ -45,6 +47,7 @@
     "unplugin-icons": "^0.14.7",
     "unplugin-vue-components": "^0.21.1",
     "vite": "^3.0.2",
-    "vue-tsc": "^0.38.9"
+    "vitest": "^0.18.1",
+    "vue-tsc": "^0.39.0"
   }
 }
