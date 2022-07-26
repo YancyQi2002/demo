@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue'
+</script>
 
 <template>
     <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -14,17 +16,14 @@
         </h2>
       </div>
       <div>
-        <h4 class="flex justify-center text-2xl">
-            Vite 3 + Vue 3 TEMPLATE
-        </h4>
+        <HelloWorld msg="Vite 3 + Vue 3 TEMPLATE"/>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-h2,
-h4 {
+h2 {
   @apply m-6 text-center font-extrabold text-gray-900 select-none;
 }
 </style>
