@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from '@/components/HelloWorld.vue'
+import FullScreen from '@/components/FullScreen/FullScreen.vue'
 </script>
 
 <template>
@@ -12,11 +13,15 @@ import HelloWorld from '@/components/HelloWorld.vue'
           <img class="mx-auto h-12 w-auto" src="@/assets/vue.svg" alt="Workflow" />
         </div>
         <h2 class="text-3xl">
-            Hello World!
+          Hello World!
         </h2>
       </div>
       <div>
         <HelloWorld msg="Vite 3 + Vue 3 TEMPLATE"/>
+      </div>
+      <hr />
+      <div class="!mt-2.5 flex items-center justify-center">
+        <FullScreen />
       </div>
     </div>
   </div>

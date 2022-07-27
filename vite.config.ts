@@ -75,7 +75,9 @@ export default defineConfig({
         AntDesignVueResolver(),
         ElementPlusResolver(),
         HeadlessUiResolver(),
-        IconsResolver(),
+        IconsResolver({
+          prefix: 'icon',
+        }),
         DevUiResolver(),
         VueUseComponentsResolver(),
       ],

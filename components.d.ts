@@ -7,8 +7,17 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Button: typeof import('vue-devui')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElDivider: typeof import('element-plus/es')['ElDivider']
+    Fullscreen: typeof import('vue-devui')['default']
+    FullScreen: typeof import('./src/components/FullScreen/FullScreen.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    IconHeroiconsOutlineArrowsExpand: typeof import('~icons/heroicons-outline/arrows-expand')['default']
+    'IconIconParkOutline:fullScreenPlay': typeof import('~icons/icon-park-outline/full-screen-play')['default']
+    IconIconParkOutlineFullScreenPlay: typeof import('~icons/icon-park-outline/full-screen-play')['default']
+    IHeroiconsOutlineArrowsExpand: typeof import('~icons/heroicons-outline/arrows-expand')['default']
+    Message: typeof import('./src/components/Message/Message.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
