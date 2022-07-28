@@ -8,8 +8,13 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Button: typeof import('vue-devui')['default']
+    Content: typeof import('vue-devui')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
     ElDivider: typeof import('element-plus/es')['ElDivider']
+    ElFooter: typeof import('element-plus/es')['ElFooter']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    Footer: typeof import('./src/components/Footer/Footer.vue')['default']
     Fullscreen: typeof import('vue-devui')['default']
     FullScreen: typeof import('./src/components/FullScreen/FullScreen.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
@@ -17,6 +22,7 @@ declare module '@vue/runtime-core' {
     'IconIconParkOutline:fullScreenPlay': typeof import('~icons/icon-park-outline/full-screen-play')['default']
     IconIconParkOutlineFullScreenPlay: typeof import('~icons/icon-park-outline/full-screen-play')['default']
     IHeroiconsOutlineArrowsExpand: typeof import('~icons/heroicons-outline/arrows-expand')['default']
+    Layout: typeof import('vue-devui')['default']
     Message: typeof import('./src/components/Message/Message.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

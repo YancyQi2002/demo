@@ -1,5 +1,6 @@
 import './assets/css/index.css'
 import 'flowbite'
+import 'vue-devui/layout/style.css'
 import App from './App.vue'
 import router from './router/index'
 

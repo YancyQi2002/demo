@@ -63,22 +63,19 @@ export default defineConfig({
         }
       ],
       resolvers: [
-        AntDesignVueResolver(),
         ElementPlusResolver(),
-        HeadlessUiResolver(),
-        DevUiResolver(),
       ],
     }),
     Components({
       extensions: ['vue'],
       resolvers: [
         AntDesignVueResolver(),
+        DevUiResolver(),
         ElementPlusResolver(),
         HeadlessUiResolver(),
         IconsResolver({
           prefix: 'icon',
         }),
-        DevUiResolver(),
         VueUseComponentsResolver(),
       ],
       dts: true,
