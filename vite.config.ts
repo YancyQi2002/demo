@@ -23,7 +23,8 @@ const resolve = (p: string) => {
 export default defineConfig({
   resolve: {
     alias: {
-      '@': resolve('./src')
+      '@': resolve('./src'),
+      '@components': resolve('./src/components')
     }
   },
   server: {
@@ -84,5 +85,13 @@ export default defineConfig({
     Icons({
       compiler: 'vue3'
     })
-  ]
+  ],
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true
+      }
+    }
+  }
 })

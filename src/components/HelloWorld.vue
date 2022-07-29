@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { handleClipboard } from "@/utils/clipboard"
-  
+import { Button } from 'flowbite-vue'
+
 defineProps<{ msg: string }>()
 
 const copy = (e) => {
@@ -10,7 +11,9 @@ const copy = (e) => {
 </script>
 
 <template>
-  <h4 class="flex items-center justify-center text-2xl">{{ msg }}</h4>
+  <h4 class="flex items-center justify-center text-2xl select-none">
+    {{ msg }}
+  </h4>
 
   <div class="card">
     <p>
@@ -36,15 +39,15 @@ const copy = (e) => {
   </p>
 
   <div class="flex items-center justify-center m-3">
-    <el-button type="primary" @click="copy">
+    <Button color="alternative" gradient="purple-blue" outline @click="copy">
       Coppy this Repositiory Url
-    </el-button>
+    </Button>
   </div>
 </template>
 
 <style scoped>
 .card,
 p {
-  @apply flex items-center justify-center text-lg;
+  @apply flex items-center justify-center text-lg select-none;
 }
 </style>

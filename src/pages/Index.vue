@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-import FullScreen from '@/components/FullScreen/FullScreen.vue'
-import Footer from '@/components/Footer/Footer.vue'
+import HelloWorld from '@components/HelloWorld.vue'
+import FullScreen from '@components/FullScreen/FullScreen.vue'
+import Footer from '@components/Footer/Footer.vue'
 </script>
 
 <template>

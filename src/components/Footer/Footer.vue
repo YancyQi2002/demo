@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FullScreen from '@/components/FullScreen/FullScreen.vue'
+import FullScreen from '@components/FullScreen/FullScreen.vue'
 </script>
 
 <template>
@@ -25,7 +25,7 @@ import FullScreen from '@/components/FullScreen/FullScreen.vue'
 
 <style scoped>
 footer {
-  @apply fixed bottom-0 left-0 z-20 p-4 w-full bg-white shadow;
+  @apply fixed bottom-0 left-0 z-20 p-4 w-full bg-white shadow select-none;
 }
 footer > span {
   @apply text-sm text-gray-500 dark:text-gray-400;
