@@ -25,7 +25,7 @@ import Footer from '@components/Footer/Footer.vue'
             </div>
           </div>
         </div>
-      </el-main> 
+      </el-main>
       <el-footer>
         <Footer />
       </el-footer>

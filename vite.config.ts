@@ -8,7 +8,6 @@ import {
   AntDesignVueResolver,
   ElementPlusResolver,
   HeadlessUiResolver,
-  DevUiResolver,
   VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
@@ -71,7 +70,6 @@ export default defineConfig({
       extensions: ['vue'],
       resolvers: [
         AntDesignVueResolver(),
-        DevUiResolver(),
         ElementPlusResolver(),
         HeadlessUiResolver(),
         IconsResolver({

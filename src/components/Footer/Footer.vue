@@ -6,7 +6,7 @@ import FullScreen from '@components/FullScreen/FullScreen.vue'
   <footer class="sr-only sm:not-sr-only border-t border-gray-200 md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
     <span>&copy; 2022 <a href="https://yx-blog.vercel.app" target="_blank" class="no-underline">Yancy Qi</a>. All Rights Reserved.
     </span>
-    <ul class="flex flex-wrap items-center mt-0 text-sm text-gray-500 dark:text-gray-400 no-underline">
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 no-underline">
       <li class="flex items-center">
         <FullScreen />
       </li>

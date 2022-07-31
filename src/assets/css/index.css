@@ -8,5 +8,4 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "ant-design-vue/dist/antd.css";
-@import "vue-devui/style.css";
 @import "./_global.css";
