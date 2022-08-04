@@ -5,32 +5,30 @@ import Footer from '@components/Footer/Footer.vue'
 </script>
 
 <template>
-  <div class="common-layout">
-    <el-container>
-      <el-main>
-        <div class="w-full h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div class="max-w-md w-full h-full space-y-8">
-            <div>
-              <div class="flex">
-                <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
-                <img class="mx-auto h-12 w-auto" src="/vite.svg" alt="Workflow" />
-                <img class="mx-auto h-12 w-auto" src="@/assets/vue.svg" alt="Workflow" />
-              </div>
-              <h2 class="text-3xl">
-                Hello World!
-              </h2>
+  <d-layout>
+    <d-content>
+      <div class="w-full h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full h-full space-y-8">
+          <div>
+            <div class="flex">
+              <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
+              <img class="mx-auto h-12 w-auto" src="/vite.svg" alt="Workflow" />
+              <img class="mx-auto h-12 w-auto" src="@/assets/vue.svg" alt="Workflow" />
             </div>
-            <div>
-              <HelloWorld msg="Vite 3 + Vue 3 TEMPLATE"/>
-            </div>
+            <h2 class="text-3xl">
+              Hello World!
+            </h2>
+          </div>
+          <div>
+            <HelloWorld msg="Vite 3 + Vue 3 TEMPLATE"/>
           </div>
         </div>
-      </el-main>
-      <el-footer>
-        <Footer />
-      </el-footer>
-    </el-container>
-  </div>
+      </div>
+    </d-content>
+    <d-footer>
+      <Footer />
+    </d-footer>
+  </d-layout>
 </template>
 
 <style scoped>
