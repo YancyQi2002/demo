@@ -2,6 +2,7 @@
 import HelloWorld from '@components/HelloWorld.vue'
 import FullScreen from '@components/FullScreen/FullScreen.vue'
 import Footer from '@components/Footer/Footer.vue'
+import BackTop from '@components/BackTop/BackTop.vue'
 </script>
 
 <template>
@@ -28,6 +29,7 @@ import Footer from '@components/Footer/Footer.vue'
     <d-footer>
       <Footer />
     </d-footer>
+    <BackTop />
   </d-layout>
 </template>
 

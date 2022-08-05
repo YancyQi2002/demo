@@ -8,6 +8,7 @@ import {
   AntDesignVueResolver,
   ElementPlusResolver,
   HeadlessUiResolver,
+  VarletUIResolver,
   VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
 import ElementPlus from 'unplugin-element-plus/vite'
@@ -75,6 +76,7 @@ export default defineConfig({
         IconsResolver({
           prefix: 'icon',
         }),
+        VarletUIResolver(),
         VueUseComponentsResolver(),
       ],
       dts: true,

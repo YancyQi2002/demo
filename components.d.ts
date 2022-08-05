@@ -7,11 +7,13 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BackTop: typeof import('./src/components/BackTop/BackTop.vue')['default']
     Button: typeof import('vue-devui')['default']
     Content: typeof import('vue-devui')['default']
     DContent: typeof import('vue-devui/content/index.es.js')['Content']
     DFooter: typeof import('vue-devui/footer/index.es.js')['Footer']
     DLayout: typeof import('vue-devui/layout/index.es.js')['Layout']
+    ElBacktop: typeof import('element-plus/es')['ElBacktop']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElContainer: typeof import('element-plus/es')['ElContainer']
     ElDivider: typeof import('element-plus/es')['ElDivider']
@@ -29,5 +31,6 @@ declare module '@vue/runtime-core' {
     Message: typeof import('./src/components/Message/Message.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VarBackTop: typeof import('@varlet/ui')['_BackTopComponent']
   }
 }
