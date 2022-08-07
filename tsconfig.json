@@ -16,8 +16,22 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": ["vite/client", "node", "element-plus/global", "unplugin-icons/types/vue",]
+    "types": [
+      "vite/client",
+      "node",
+      "element-plus/global",
+      "unplugin-icons/types/vue",
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "auto-imports.d.ts", "components.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ],
+  "references": [{
+    "path": "./tsconfig.node.json"
+  }]
 }

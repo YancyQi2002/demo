@@ -39,7 +39,7 @@ const copy = (e) => {
   </p>
 
   <div class="flex items-center justify-center m-3">
-    <Button color="alternative" gradient="purple-blue" outline @click="copy">
+    <Button gradient="purple-blue" outline @click="copy">
       Coppy this Repositiory Url
     </Button>
   </div>
