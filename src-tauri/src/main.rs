@@ -4,8 +4,8 @@
 )]
 
 use tauri::{ Menu, Submenu, MenuItem, CustomMenuItem };
-
 use tauri::Manager;
+use tauri_plugin_store::PluginBuilder;
 
 #[tauri::command]
 async fn close_splashscreen(window: tauri::Window) {
@@ -54,6 +54,7 @@ fn main() {
       _ => {}
     })
     .invoke_handler(tauri::generate_handler![close_splashscreen])
+    .plugin(PluginBuilder::default().build())
     .setup(|app| {
       let splashscreen_window = app.get_window("splashscreen").unwrap();
       let main_window = app.get_window("main").unwrap();
