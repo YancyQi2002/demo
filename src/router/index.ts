@@ -1,3 +1,4 @@
+// @ts-ignore
 const routes: RouteRecordRaw[] = []
 
 const modules = import.meta.globEager('./module/*.ts')

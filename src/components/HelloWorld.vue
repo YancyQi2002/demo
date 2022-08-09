@@ -4,7 +4,7 @@ import { Button } from 'flowbite-vue'
 
 defineProps<{ msg: string }>()
 
-const copy = (e) => {
+const copy = (e: any) => {
   console.log("[ e ] >", e)
   handleClipboard("https://github.com/YancyQi2002/vite3-vue3-template", e)
 }

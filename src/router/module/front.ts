@@ -1,3 +1,4 @@
+// @ts-ignore
 const routes: RouteRecordRaw[] = [
   {
     name: 'Index',
