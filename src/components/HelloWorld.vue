@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { handleClipboard } from "@/utils/clipboard"
 import { Button } from 'flowbite-vue'
+import { handleClipboard } from '@/utils/clipboard'
 
 defineProps<{ msg: string }>()
 
 const copy = (e: any) => {
-  console.log("[ e ] >", e)
-  handleClipboard("https://github.com/YancyQi2002/vite3-vue3-template", e)
+  console.log('[ e ] >', e)
+  handleClipboard('https://github.com/YancyQi2002/vite3-vue3-template', e)
 }
 </script>
 

@@ -7,7 +7,7 @@ const store = new Store(`${STORE_DEFAULT_PATH}/.config.dat`)
 // 初始化store文件
 const initStore = async () => {
   try {
-    await store.load();
+    await store.load()
     // 合并初始配置和用户自定义配置，以防缺少配置项
     for (const key of Object.keys(STORE_DEFAULT_VALUES)) {
       const setValue = (await getStore(key)) || STORE_DEFAULT_VALUES[key]
@@ -42,7 +42,7 @@ const saveStore = async () => {
   try {
     await store.save()
   } catch (error) {
-    console.log("error", error)
+    console.log('error', error)
   }
 }
 
