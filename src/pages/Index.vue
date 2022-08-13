@@ -1,18 +1,8 @@
 <script setup lang="ts">
+import * as tauriVer from '@/utils/tauriVer'
 import HelloWorld from '@components/HelloWorld.vue'
 import Footer from '@components/Footer/Footer.vue'
 import BackTop from '@components/BackTop/BackTop.vue'
-import { isTauri } from '@/utils/isTauri'
-
-let tauriVersion = $ref('')
-
-if (!isTauri) {
-	tauriVersion = '当前平台版本未使用 Tauri 进行构建'
-}
-
-console.log(tauriVersion)
-
-localStorage.setItem('tauriVersion', tauriVersion)
 </script>
 
 <template>

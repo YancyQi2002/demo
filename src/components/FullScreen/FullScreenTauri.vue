@@ -2,10 +2,17 @@
 import { appWindow } from '@tauri-apps/api/window'
 
 const fullscreen = await appWindow.isFullscreen()
+const refresh = getCurrentInstance() as any
 const toggle = async() => {
-  fullscreen === false
-    ? await appWindow.setFullscreen(true)
-    : await appWindow.setFullscreen(false)
+  if (fullscreen === false) {
+    await appWindow.setFullscreen(true)
+    fullscreen = await appWindow.isFullscreen()
+    refresh!.proxy!.$forceUpdate()
+  } else {
+    await appWindow.setFullscreen(false)
+    fullscreen = await appWindow.isFullscreen()
+    refresh!.proxy!.$forceUpdate()
+  }
 }
 </script>
 

@@ -32,6 +32,7 @@ declare module '@vue/runtime-core' {
     Message: typeof import('./src/components/Message/Message.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TauriVer: typeof import('./src/components/Tauri/TauriVer.vue')['default']
     VarBackTop: typeof import('@varlet/ui')['_BackTopComponent']
   }
 }

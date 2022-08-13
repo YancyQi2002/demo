@@ -2,14 +2,10 @@
 import FullScreen from '@components/FullScreen/FullScreen.vue'
 import FullScreenTauri from '@components/FullScreen/FullScreenTauri.vue'
 
-const tauriVer = localStorage.getItem('tauriVersion')
+const tauriVer = localStorage.getItem('tauriVersion')?.toString()
 
-const changeScreen = document.getElementById('changescreen')
-const changeScreenTauri = document.getElementById('changescreentauri')
-
-if (tauriVer !== '当前平台版本未使用 Tauri 进行构建') {
-  changeScreen.classList.add('hidden')
-  changeScreenTauri.classList.remove('hidden')
+if (tauriVer === undefined) {
+  localStorage.setItem('tauriVersion', '当前平台版本未使用 Tauri 进行构建')
 }
 </script>
 
@@ -19,8 +15,10 @@ if (tauriVer !== '当前平台版本未使用 Tauri 进行构建') {
     </span>
     <ul class="flex flex-wrap items-center mt-0 text-sm text-gray-500 dark:text-gray-400 no-underline">
       <li class="flex items-center">
-        <FullScreen id="changescreen"/>
-        <FullScreenTauri id="changescreentauri" class="hidden" />
+        <suspense>
+          <FullScreen v-if="tauriVer === '当前平台版本未使用 Tauri 进行构建'" />
+          <FullScreenTauri v-else />
+        </suspense>
       </li>
     </ul>
   </footer>

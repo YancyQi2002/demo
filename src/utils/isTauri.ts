@@ -1,10 +1,5 @@
 import { getTauriVersion } from '@tauri-apps/api/app'
 
-let tauriVersion = $ref('')
-const getTauriInfo = async (): Promise<void> => {
-	tauriVersion = await getTauriVersion()
-}
-
-getTauriInfo()
+let tauriVersion: string = await getTauriVersion()
 
 export const isTauri: boolean = tauriVersion !== ''
