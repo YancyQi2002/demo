@@ -68,11 +68,13 @@
         "resizable": true,
         "title": "Tauri App",
         "width": 800,
+        "center": true,
         "visible": false
       },
       {
         "width": 500,
         "height": 300,
+        "center": true,
         "decorations": false,
         "url":"splashscreen.html",
         "label": "splashscreen"

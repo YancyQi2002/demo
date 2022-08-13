@@ -22,6 +22,7 @@ declare module '@vue/runtime-core' {
     Footer: typeof import('./src/components/Footer/Footer.vue')['default']
     Fullscreen: typeof import('vue-devui')['default']
     FullScreen: typeof import('./src/components/FullScreen/FullScreen.vue')['default']
+    FullScreenTauri: typeof import('./src/components/FullScreen/FullScreenTauri.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconHeroiconsOutlineArrowsExpand: typeof import('~icons/heroicons-outline/arrows-expand')['default']
     'IconIconParkOutline:fullScreenPlay': typeof import('~icons/icon-park-outline/full-screen-play')['default']

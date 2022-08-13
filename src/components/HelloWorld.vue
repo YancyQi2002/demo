@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { Button } from 'flowbite-vue'
-import { handleClipboard } from '@/utils/clipboard'
+import { handleClipboard, handleClipboardTauri } from '@/utils/clipboard'
 
 defineProps<{ msg: string }>()
 
+const tauriVer = localStorage.getItem('tauriVersion')
+
 const copy = (e: any) => {
   console.log('[ e ] >', e)
-  handleClipboard('https://github.com/YancyQi2002/vite3-vue3-template', e)
+  tauriVer === '当前平台版本未使用 Tauri 进行构建'
+  ? handleClipboard('https://github.com/YancyQi2002/vite3-vue3-template', e)
+  : handleClipboardTauri('https://github.com/YancyQi2002/vite3-vue3-template', e)
 }
 </script>
 
