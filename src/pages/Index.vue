@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import * as tauriVer from '@/utils/tauriVer'
 import HelloWorld from '@components/HelloWorld.vue'
 import Footer from '@components/Footer/Footer.vue'
 import BackTop from '@components/BackTop/BackTop.vue'
+import * as tauriVer from '@/utils/tauriVer'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
-import { isTauri } from '@/utils/isTauri'
 import { getTauriVersion } from '@tauri-apps/api/app'
+import { isTauri } from '@/utils/isTauri'
 
 let tauriVersion: string = await getTauriVersion()
 

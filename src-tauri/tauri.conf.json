@@ -36,7 +36,8 @@
         "exceptionDomain": "",
         "frameworks": [],
         "providerShortName": null,
-        "signingIdentity": null
+        "signingIdentity": null,
+        "license": "../LICENSE"
       },
       "resources": [],
       "shortDescription": "",
@@ -45,6 +46,9 @@
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": "",
+        "webviewInstallMode": {
+          "type": "embedBootstrapper"
+        },
         "wix": {
           "language": [
             "en-US",
@@ -52,7 +56,8 @@
             "zh-TW",
             "ru-RU"
           ]
-        }
+        },
+        "license": "../LICENSE"
       }
     },
     "security": {

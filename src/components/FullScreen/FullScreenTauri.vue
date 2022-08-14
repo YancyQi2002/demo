@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { appWindow } from '@tauri-apps/api/window'
 
-const fullscreen = await appWindow.isFullscreen()
+let fullscreen = await appWindow.isFullscreen()
 const refresh = getCurrentInstance() as any
 const toggle = async() => {
   if (fullscreen === false) {

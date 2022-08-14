@@ -13,3 +13,7 @@ pnpm i
 pnpm run dev
 pnpm tauri dev
 ```
+
+# LICENSE
+
+![](./public/wtfpl-badge.png)
