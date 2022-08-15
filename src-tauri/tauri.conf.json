@@ -12,7 +12,10 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "notification": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
@@ -55,9 +58,9 @@
             "zh-CN",
             "zh-TW",
             "ru-RU"
-          ]
-        },
-        "license": "../LICENSE"
+          ],
+          "license": "../LICENSE"
+        }
       }
     },
     "security": {

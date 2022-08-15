@@ -3,6 +3,7 @@ import { Snackbar } from '@varlet/ui'
 import '@varlet/ui/es/snackbar/style/index.js'
 import { breakpointsTailwind } from '@vueuse/core'
 import { writeText, readText } from '@tauri-apps/api/clipboard'
+import { isPermissionGranted, requestPermission, sendNotification } from '@tauri-apps/api/notification'
 
 const sm = useBreakpoints(breakpointsTailwind).smaller('sm')
 
@@ -23,6 +24,28 @@ const clipboardError = () => {
         message: 'Copy failed.',
         type: 'error'
       })
+}
+
+const clipboardSuccessTauri = async() => {
+  let permissionGranted = await isPermissionGranted()
+  if (!permissionGranted) {
+    const permission = await requestPermission()
+    permissionGranted = permission === 'granted'
+  }
+  if (permissionGranted) {
+    sendNotification({ title: 'TAURI', body: 'Copy successfully.' })
+  }
+}
+
+const clipboardErrorTauri = async() => {
+  let permissionGranted = await isPermissionGranted()
+  if (!permissionGranted) {
+    const permission = await requestPermission()
+    permissionGranted = permission === 'granted'
+  }
+  if (permissionGranted) {
+    sendNotification({ title: 'TAURI', body: 'Copy failed.' })
+  }
 }
 
 export const handleClipboard = (text: string, event: MouseEvent) => {
@@ -49,8 +72,8 @@ export const handleClipboardTauri = async (text: string, event: MouseEvent) => {
   const clipboardText = await readText()
   console.log(clipboardText)
   if (clipboardText === text) {
-    clipboardSuccess()
+    clipboardSuccessTauri()
   } else {
-    clipboardError()
+    clipboardErrorTauri()
   }
 }
