@@ -19,11 +19,11 @@ if (tauriVer === undefined) {
       </a>
       . All Rights Reserved.&nbsp;
       <a href="http://www.wtfpl.net/">
-        <img :src="wtfpl" class="w-6" alt="WTFPL" />
+        <img :src="wtfpl" alt="WTFPL" />
       </a>
     </span>
-    <ul class="flex flex-wrap items-center mt-0 text-sm text-gray-500 dark:text-gray-400 no-underline">
-      <li class="flex items-center">
+    <ul>
+      <li>
         <suspense>
           <FullScreen v-if="tauriVer === '当前平台版本未使用 Tauri 进行构建'" />
           <FullScreenTauri v-else />
@@ -43,10 +43,5 @@ if (tauriVer === undefined) {
 </template>
 
 <style scoped>
-footer {
-  @apply fixed bottom-0 left-0 z-20 p-4 w-full bg-white shadow select-none;
-}
-footer > span {
-  @apply text-sm text-gray-500 dark:text-gray-400;
-}
+@import '@/assets/css/footer/footer.module.css';
 </style>

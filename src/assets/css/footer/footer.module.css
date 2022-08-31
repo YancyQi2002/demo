@@ -1,0 +1,19 @@
+footer {
+  @apply fixed bottom-0 left-0 z-20 p-4 w-full bg-white shadow select-none;
+}
+
+footer > span {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+footer > span > a > img {
+  @apply w-6;
+}
+
+footer > ul:has(li) {
+  @apply flex flex-wrap items-center mt-0 text-sm text-gray-500 dark:text-gray-400 no-underline;
+}
+
+footer > ul > li {
+  @apply flex items-center;
+}

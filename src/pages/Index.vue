@@ -12,9 +12,23 @@ import * as tauriVer from '@/utils/tauriVer'
         <div class="max-w-md w-full h-full space-y-8">
           <div>
             <div class="flex">
-              <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow" />
-              <img class="mx-auto h-12 w-auto" src="/vite.svg" alt="Workflow" />
-              <img class="mx-auto h-12 w-auto" src="@/assets/vue.svg" alt="Workflow" />
+              <img
+                class="mx-auto h-12 w-auto" 
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                srcset="/tailwindcss.avif"
+                alt="Workflow"
+              />
+              <img
+                class="mx-auto h-12 w-auto"
+                src="/vite.svg"
+                srcset="/vite.avif"
+                alt="Workflow"
+              />
+              <img
+                class="mx-auto h-12 w-auto"
+                src="@/assets/vue.svg"
+                alt="Workflow"
+              />
             </div>
             <h2 class="text-3xl">
               Hello World!

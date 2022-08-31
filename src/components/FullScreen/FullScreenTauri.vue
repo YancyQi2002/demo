@@ -17,18 +17,20 @@ const toggle = async() => {
 </script>
 
 <template>
-  <a class="mr-4 md:mr-6" @click="toggle" v-if="fullscreen == false">
-    <div class="flex items-center justify-center">
+  <a @click="toggle" v-if="fullscreen == false">
+    <div class="change-fullscreen">
       <icon-heroicons-outline-arrows-expand />
-      <span class="ml-2">开启全屏</span>
+      <span>开启全屏</span>
     </div>
   </a>
-  <a class="mr-4 md:mr-6" @click="toggle" v-else>
-    <div class="flex items-center justify-center">
+  <a @click="toggle" v-else>
+    <div class="change-fullscreen">
       <icon-icon-park-outline-full-screen-play />
-      <span class="ml-2">退出全屏</span>
+      <span>退出全屏</span>
     </div>
   </a>
 </template>
 
-<style scoped></style>
+<style scoped>
+@import '@/assets/css/fullscreen/fullscreen.module.css';
+</style>

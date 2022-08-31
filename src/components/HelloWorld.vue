@@ -15,14 +15,14 @@ const copy = (e: any) => {
 </script>
 
 <template>
-  <h4 class="flex items-center justify-center text-2xl select-none">
+  <h4>
     {{ msg }}
   </h4>
 
   <div class="card">
     <p>
       Edit&nbsp;
-      <kbd class="px-2 py-1 text-base font-extrabold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+      <kbd>
         components/HelloWorld.vue
       </kbd>
       &nbsp;to test HMR
@@ -50,8 +50,16 @@ const copy = (e: any) => {
 </template>
 
 <style scoped>
+h4 {
+  @apply flex items-center justify-center text-2xl select-none;
+}
+
 .card,
 p {
   @apply flex items-center justify-center text-lg select-none;
+}
+
+.card > p > kbd {
+  @apply px-2 py-1 text-base font-extrabold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500;
 }
 </style>

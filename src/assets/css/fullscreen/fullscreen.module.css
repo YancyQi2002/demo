@@ -1,0 +1,11 @@
+a:has(> .change-fullscreen) {
+  @apply mr-4 md:mr-6;
+}
+
+a > .change-fullscreen {
+  @apply flex items-center justify-center;
+}
+
+a > .change-fullscreen > span {
+  @apply ml-2;
+}
