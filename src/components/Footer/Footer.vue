@@ -19,7 +19,11 @@ if (tauriVer === undefined) {
       </a>
       . All Rights Reserved.&nbsp;
       <a href="http://www.wtfpl.net/">
-        <img :src="wtfpl" alt="WTFPL" />
+        <img
+          :src="wtfpl"
+          alt="WTFPL"
+          loading="lazy"
+        />
       </a>
     </span>
     <ul>

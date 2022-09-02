@@ -16,18 +16,24 @@ import * as tauriVer from '@/utils/tauriVer'
                 class="mx-auto h-12 w-auto" 
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                 srcset="/tailwindcss.avif"
-                alt="Workflow"
+                loading="lazy"
+                alt="tailwind"
+                onerror="this.classList.add('error');"
               />
               <img
                 class="mx-auto h-12 w-auto"
                 src="/vite.svg"
                 srcset="/vite.avif"
-                alt="Workflow"
+                loading="lazy"
+                alt="vite"
+                onerror="this.classList.add('error');"
               />
               <img
                 class="mx-auto h-12 w-auto"
                 src="@/assets/vue.svg"
-                alt="Workflow"
+                loading="lazy"
+                alt="vue"
+                onerror="this.classList.add('error');"
               />
             </div>
             <h2 class="text-3xl">
