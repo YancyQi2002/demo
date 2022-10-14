@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ABackTop: typeof import('ant-design-vue/es')['BackTop']
     BackTop: typeof import('./src/components/BackTop/BackTop.vue')['default']
     Button: typeof import('vue-devui')['default']
     Content: typeof import('vue-devui')['default']

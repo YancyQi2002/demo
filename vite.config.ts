@@ -5,12 +5,10 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {
   AntDesignVueResolver,
-  ElementPlusResolver,
   HeadlessUiResolver,
   VarletUIResolver,
   VueUseComponentsResolver
 } from 'unplugin-vue-components/resolvers'
-import ElementPlus from 'unplugin-element-plus/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
@@ -62,15 +60,12 @@ export default defineConfig({
           ],
         }
       ],
-      resolvers: [
-        ElementPlusResolver(),
-      ],
+      resolvers: [],
     }),
     Components({
       extensions: ['vue'],
       resolvers: [
         AntDesignVueResolver(),
-        ElementPlusResolver(),
         HeadlessUiResolver(),
         IconsResolver({
           prefix: 'icon',
@@ -80,7 +75,6 @@ export default defineConfig({
       ],
       dts: true,
     }),
-    ElementPlus(),
     Icons({
       compiler: 'vue3'
     })

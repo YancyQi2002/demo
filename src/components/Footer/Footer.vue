@@ -26,7 +26,7 @@ if (tauriVer === undefined) {
         />
       </a>
     </span>
-    <ul>
+    <ul class="mb-0">
       <li>
         <suspense>
           <FullScreen v-if="tauriVer === '当前平台版本未使用 Tauri 进行构建'" />
